@@ -4,6 +4,9 @@ from google.transit import gtfs_realtime_pb2
 import requests
 from dataclasses import dataclass
 from dotenv import load_dotenv
+import logging
+import sys
+import paho.mqtt.client as mqtt
 
 load_dotenv()
 
@@ -13,12 +16,48 @@ TRANSITLAND_FEED_DIR = os.environ["TRANSITLAND_FEED_DIR"]
 
 last_modified_cache = {}
 
+broker = 'gcmb.io'
+port = 8883
+client_id = 'stefan/public-transport/data-publisher/pub'
+username = os.environ['MQTT_USERNAME']
+password = os.environ['MQTT_PASSWORD']
+
+log_level = os.environ.get('LOG_LEVEL', 'INFO')
+print("Using log level", log_level)
+
+logger = logging.getLogger()
+logger.setLevel(log_level)
+
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
 
 @dataclass
 class Feed:
     operator_name: str
     url: str
     authorization: dict
+
+
+def connect_mqtt():
+    def on_connect(client, userdata, flags, rc, properties):
+        if rc == 0:
+            logger.info("Connected to MQTT Broker")
+        else:
+            logger.error(f"Failed to connect, return code {rc}")
+
+    mqtt_client = mqtt.Client(client_id=client_id,
+                              callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
+    mqtt_client.tls_set(ca_certs='/etc/ssl/certs/ca-certificates.crt')
+    mqtt_client.username_pw_set(username, password)
+    mqtt_client.on_connect = on_connect
+    mqtt_client.on_disconnect = lambda client, userdata, disconnect_flags, reason_code, properties: logger.warning(
+        f"Disconnected from MQTT Broker, return code {reason_code}")
+    mqtt_client.connect(broker, port)
+    return mqtt_client
 
 
 def can_be_used(license_obj):
@@ -62,7 +101,7 @@ def get_rt_feeds_from_file_content(filename, data):
         for operator in feed_operators:
             associated_feeds = operator.get('associated_feeds') or []
             for associated_feed in associated_feeds:
-                associated_feed_id = associated_feed.get('feed_onestop_id')
+                ssociated_feed_id = associated_feed.get('feed_onestop_id')
                 if associated_feed_id is None:
                     continue
                 associated_operators[associated_feed_id] = operator
@@ -82,7 +121,7 @@ def get_rt_feeds_from_file_content(filename, data):
             operator = feed.get('operator') or associated_operators.get(feed['id'])
             if operator is None:
                 print("No operator", filename, "for feed", feed['id'])
-                continue
+         mqtt_client = connect_mqtt()       continue
 
             authorization = feed.get('authorization')
             feeds.append(Feed(operator['name'], urls['realtime_vehicle_positions'], authorization))
