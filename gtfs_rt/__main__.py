@@ -105,7 +105,7 @@ def get_rf_feeds():
         if not file.endswith(".json"):
             continue
 
-        feeds = get_rt_feeds_from_file(file)
+        feeds = get_rt_feeds_from_file(TRANSITLAND_FEED_DIR + '/' + file)
         all_feeds += feeds
 
     return all_feeds
@@ -151,11 +151,15 @@ def main():
 
     # Germany, but does not have vehicle positions
     # url = 'https://realtime.gtfs.de/realtime-free.pb'
-    # url = 'https://smrt.tripshot.com/v1/gtfs/realtime/vehiclePosition/CA558DDC-D7F2-4B48-9CAC-DEEA1134F820'
 
     # Turin
     url = 'http://percorsieorari.gtt.to.it/das_gtfsrt/vehicle_position.aspx'
     vehicle_positions = get_vehicle_positions(url)
+
+    # Publish to MQTT:
+    # stefan/gtfs-rt/GTT_Servizio_Ferroviario/vehicle_positions/9060 -> Lat,Lon
+    # stefan/gtfs-rt/GTT_Servizio_Ferroviario/pb -> Protobuf message
+
 
     # for feed in rt_feeds_no_auth:
     #     print(feed)
