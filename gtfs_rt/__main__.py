@@ -137,6 +137,9 @@ def get_vehicle_positions(url):
     return vehicle_positions
 
 
+def operator_name_to_topic(operator_name):
+    return operator_name.replace(" ", "_").replace("/", "_").replace("-", "_").replace("(", "").replace(")", "").replace( ",", "").replace(".", "").replace(":", "").replace(";", "").replace("'", "").replace("’", "")
+
 def main():
 
     rt_feeds = get_rf_feeds()
@@ -155,6 +158,13 @@ def main():
     # Turin
     url = 'http://percorsieorari.gtt.to.it/das_gtfsrt/vehicle_position.aspx'
     vehicle_positions = get_vehicle_positions(url)
+
+    feed = [f for f in rt_feeds_no_auth if f.url == url][0]
+    print(operator_name_to_topic(feed.operator_name))
+
+    for vehicle_position in vehicle_positions:
+        topic = f"stefan/gtfs-rt/{operator_name_to_topic(feed.operator_name)}/vehicle_positions/{vehicle_position.vehicle.id}"
+        print(f"Publishing to {topic}")
 
     # Publish to MQTT:
     # stefan/gtfs-rt/GTT_Servizio_Ferroviario/vehicle_positions/9060 -> Lat,Lon
