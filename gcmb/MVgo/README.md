@@ -7,4 +7,4 @@ URL: https://mvgo.org/developers/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/MVgo/vehicle_positions/#" />
+<WorldMap topic="MVgo/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Paris_Saclay/vehicle_positions/#" />
+<WorldMap topic="Paris_Saclay/vehicle_positions/#" />

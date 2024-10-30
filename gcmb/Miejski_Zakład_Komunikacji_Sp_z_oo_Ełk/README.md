@@ -7,4 +7,4 @@ URL: https://creativecommons.org/publicdomain/zero/1.0/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Miejski_Zakład_Komunikacji_Sp_z_oo_Ełk/vehicle_positions/#" />
+<WorldMap topic="Miejski_Zakład_Komunikacji_Sp_z_oo_Ełk/vehicle_positions/#" />

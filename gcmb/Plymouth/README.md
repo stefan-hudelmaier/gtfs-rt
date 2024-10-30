@@ -7,4 +7,4 @@ URL: https://svc.metrotransit.org
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Plymouth/vehicle_positions/#" />
+<WorldMap topic="Plymouth/vehicle_positions/#" />

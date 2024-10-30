@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Transport_Arche/vehicle_positions/#" />
+<WorldMap topic="Transport_Arche/vehicle_positions/#" />

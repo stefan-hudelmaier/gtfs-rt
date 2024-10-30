@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Transavold/vehicle_positions/#" />
+<WorldMap topic="Transavold/vehicle_positions/#" />

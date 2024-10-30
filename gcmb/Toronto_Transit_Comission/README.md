@@ -7,4 +7,4 @@ URL: https://open.toronto.ca/dataset/ttc-bustime-real-time-next-vehicle-arrival-
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Toronto_Transit_Comission/vehicle_positions/#" />
+<WorldMap topic="Toronto_Transit_Comission/vehicle_positions/#" />

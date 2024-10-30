@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/MRC_de_Montcalm/vehicle_positions/#" />
+<WorldMap topic="MRC_de_Montcalm/vehicle_positions/#" />

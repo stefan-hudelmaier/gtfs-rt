@@ -7,4 +7,4 @@ URL: https://transport.data.gouv.fr/datasets/horaires-theoriques-et-temps-reel-d
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Syndicat_Intercommunal_des_Transports_urbains_de_lAgglomeration_du_Calaisis/vehicle_positions/#" />
+<WorldMap topic="Syndicat_Intercommunal_des_Transports_urbains_de_lAgglomeration_du_Calaisis/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Bordeaux___Navettes_aeroport___30_Direct/vehicle_positions/#" />
+<WorldMap topic="Bordeaux___Navettes_aeroport___30_Direct/vehicle_positions/#" />

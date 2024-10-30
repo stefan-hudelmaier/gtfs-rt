@@ -7,4 +7,4 @@ URL: https://transport.data.gouv.fr/datasets/gtfs-et-gtfs-rt-reseau-orizo-grand-
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Transports_en_Commun_Region_dAvignon/vehicle_positions/#" />
+<WorldMap topic="Transports_en_Commun_Region_dAvignon/vehicle_positions/#" />

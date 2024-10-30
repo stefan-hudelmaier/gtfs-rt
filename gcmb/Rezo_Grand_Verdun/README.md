@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Rezo_Grand_Verdun/vehicle_positions/#" />
+<WorldMap topic="Rezo_Grand_Verdun/vehicle_positions/#" />

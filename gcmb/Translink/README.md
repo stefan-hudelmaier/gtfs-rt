@@ -7,4 +7,4 @@ URL: https://www.data.qld.gov.au/dataset/translink-real-time-data
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Translink/vehicle_positions/#" />
+<WorldMap topic="Translink/vehicle_positions/#" />

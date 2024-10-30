@@ -7,4 +7,4 @@ URL: https://transport.data.gouv.fr/datasets/gtfs-diviamobilites
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Keolis_Dijon_Mobilites/vehicle_positions/#" />
+<WorldMap topic="Keolis_Dijon_Mobilites/vehicle_positions/#" />

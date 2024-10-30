@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Ritmo/vehicle_positions/#" />
+<WorldMap topic="Ritmo/vehicle_positions/#" />

@@ -268,7 +268,7 @@ URL: {feed.license.url}
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/{operator_name_to_topic(feed.operator_name)}/vehicle_positions/#" />
+<WorldMap topic="{operator_name_to_topic(feed.operator_name)}/vehicle_positions/#" />
 """
 
 

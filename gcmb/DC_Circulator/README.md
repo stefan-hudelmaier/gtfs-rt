@@ -7,4 +7,4 @@ URL: https://octo.dc.gov/page/district-columbia-data-policy
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/DC_Circulator/vehicle_positions/#" />
+<WorldMap topic="DC_Circulator/vehicle_positions/#" />

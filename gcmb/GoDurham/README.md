@@ -7,4 +7,4 @@ URL: https://godurhamtransit.org/developer-terms-and-conditions
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/GoDurham/vehicle_positions/#" />
+<WorldMap topic="GoDurham/vehicle_positions/#" />

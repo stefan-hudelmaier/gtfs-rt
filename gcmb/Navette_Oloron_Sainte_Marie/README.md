@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Navette_Oloron_Sainte_Marie/vehicle_positions/#" />
+<WorldMap topic="Navette_Oloron_Sainte_Marie/vehicle_positions/#" />

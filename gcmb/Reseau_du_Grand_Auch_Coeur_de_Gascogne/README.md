@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Reseau_du_Grand_Auch_Coeur_de_Gascogne/vehicle_positions/#" />
+<WorldMap topic="Reseau_du_Grand_Auch_Coeur_de_Gascogne/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Saint_Jean_Sur_Richelieu/vehicle_positions/#" />
+<WorldMap topic="Saint_Jean_Sur_Richelieu/vehicle_positions/#" />

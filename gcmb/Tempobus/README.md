@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Tempobus/vehicle_positions/#" />
+<WorldMap topic="Tempobus/vehicle_positions/#" />

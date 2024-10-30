@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/LInter_des_Laurentides/vehicle_positions/#" />
+<WorldMap topic="LInter_des_Laurentides/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: https://www.phoenixopendata.com/dataset/general-transit-feed-specification
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Valley_Metro/vehicle_positions/#" />
+<WorldMap topic="Valley_Metro/vehicle_positions/#" />

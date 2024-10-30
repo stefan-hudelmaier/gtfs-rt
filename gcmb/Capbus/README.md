@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Capbus/vehicle_positions/#" />
+<WorldMap topic="Capbus/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Skibus/vehicle_positions/#" />
+<WorldMap topic="Skibus/vehicle_positions/#" />

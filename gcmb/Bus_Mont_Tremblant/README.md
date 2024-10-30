@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Bus_Mont_Tremblant/vehicle_positions/#" />
+<WorldMap topic="Bus_Mont_Tremblant/vehicle_positions/#" />

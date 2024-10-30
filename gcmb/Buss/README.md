@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Buss/vehicle_positions/#" />
+<WorldMap topic="Buss/vehicle_positions/#" />

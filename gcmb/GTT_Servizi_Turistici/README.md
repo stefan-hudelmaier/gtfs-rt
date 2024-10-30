@@ -7,4 +7,4 @@ URL: http://aperto.comune.torino.it/dataset/feed-gtfs-real-time-trasporti-gtt/re
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/GTT_Servizi_Turistici/vehicle_positions/#" />
+<WorldMap topic="GTT_Servizi_Turistici/vehicle_positions/#" />

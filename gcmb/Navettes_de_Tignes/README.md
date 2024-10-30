@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Navettes_de_Tignes/vehicle_positions/#" />
+<WorldMap topic="Navettes_de_Tignes/vehicle_positions/#" />

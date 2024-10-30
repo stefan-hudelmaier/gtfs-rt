@@ -7,4 +7,4 @@ URL: https://creativecommons.org/publicdomain/zero/1.0/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Zarzad_Transportu_Miejskiego_w_Warszawie/vehicle_positions/#" />
+<WorldMap topic="Zarzad_Transportu_Miejskiego_w_Warszawie/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Navettes_Les_Saisies/vehicle_positions/#" />
+<WorldMap topic="Navettes_Les_Saisies/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: None
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Transdev_Nimes_Mobilites/vehicle_positions/#" />
+<WorldMap topic="Transdev_Nimes_Mobilites/vehicle_positions/#" />

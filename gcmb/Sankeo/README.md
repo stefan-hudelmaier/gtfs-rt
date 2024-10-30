@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Sankeo/vehicle_positions/#" />
+<WorldMap topic="Sankeo/vehicle_positions/#" />

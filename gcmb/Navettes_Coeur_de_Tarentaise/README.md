@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/Navettes_Coeur_de_Tarentaise/vehicle_positions/#" />
+<WorldMap topic="Navettes_Coeur_de_Tarentaise/vehicle_positions/#" />

@@ -7,4 +7,4 @@ URL: https://www.bctransit.com/open-data/terms-of-use
 
 ## Map
 
-<WorldMap topic="stefan/public-transport/BCTransit/vehicle_positions/#" />
+<WorldMap topic="BCTransit/vehicle_positions/#" />
