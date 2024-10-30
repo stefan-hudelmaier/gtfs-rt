@@ -22,7 +22,7 @@ generate_gcmb_readme = os.environ.get("GENERATE_GCMB_README", "false") == "true"
 
 last_modified_cache = {}
 
-broker = 'gcmb.io'
+broker = os.environ.get('MQTT_HOST', 'gcmb.io')
 port = 8883
 client_id = 'stefan/public-transport/data-publisher/pub'
 username = os.environ['MQTT_USERNAME']
