@@ -203,6 +203,7 @@ def get_vehicle_positions(gtfs_rt_message_pb):
         if entity.HasField('vehicle'):
             vehicle_positions.append(entity.vehicle)
 
+    logger.info(f"Vehicle positions: {len(vehicle_positions)}")
     return vehicle_positions
 
 
