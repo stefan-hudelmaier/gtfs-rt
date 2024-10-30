@@ -235,12 +235,20 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
 
     vehicle_positions = get_vehicle_positions(gtfs_rt_message_pb)
 
-    # Publish individual vehicle positions
+    newest_position_by_vehicle = {}
     for vehicle_position in vehicle_positions:
-        position_topic = f"stefan/public-transport/{operator_topic_part}/vehicle_positions/{vehicle_position.vehicle.id}"
-        logger.debug(f"Publishing to {position_topic}")
-        result = mqtt_client.publish(position_topic,
-                            f"{vehicle_position.position.latitude},{vehicle_position.position.longitude}", retain=True)
+        vehicle_id = vehicle_position.vehicle.id
+        newest_position = newest_position_by_vehicle.get(vehicle_id)
+        if newest_position is None or vehicle_position.vehicle.timestamp > newest_position:
+            newest_position_by_vehicle[vehicle_id] = vehicle_position.position
+
+    # Publish individual vehicle positions
+    for vehicle_id in newest_position_by_vehicle:
+        position = newest_position_by_vehicle[vehicle_id]
+        position_topic = f"stefan/public-transport/{operator_topic_part}/vehicle_positions/{vehicle_id}"
+        payload = f"{position.latitude},{position.longitude}"
+        logger.debug(f"Publishing {payload} to {position_topic}")
+        result = mqtt_client.publish(position_topic, payload , retain=True)
         logger.debug(f"Publish result: {result}")
 
 
@@ -252,11 +260,6 @@ def generate_gcmb_readme(feed: Feed):
 Name: {feed.license.spdx_identifier}
 URL: {feed.license.url}
 
-Redistribution allowed: {feed.license.redistribution_allowed}
-Commercial use allowed: {feed.license.commercial_use_allowed}
-Create derived product: {feed.license.create_derived_product}
-Use without attribution: {feed.license.use_without_attribution}
-
 ## Map
 
 <WorldMap topic="stefan/public-transport/{operator_name_to_topic(feed.operator_name)}/vehicle_positions/#" />
@@ -265,6 +268,7 @@ Use without attribution: {feed.license.use_without_attribution}
 
 def generate_gcmb_readmes(feeds: list[Feed]):
     if generate_gcmb_readme:
+
         for feed in feeds:
             readme = generate_gcmb_readme(feed)
             operator_name = operator_name_to_topic(feed.operator_name)
