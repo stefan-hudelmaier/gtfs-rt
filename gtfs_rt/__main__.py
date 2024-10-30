@@ -2,6 +2,7 @@ import os
 import json
 from pprint import pformat
 from venv import create
+import unicodedata
 
 from google.transit import gtfs_realtime_pb2
 import requests
@@ -205,8 +206,13 @@ def get_vehicle_positions(gtfs_rt_message_pb):
     return vehicle_positions
 
 
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
+
 def operator_name_to_topic(operator_name):
-    return operator_name.replace(" ", "_").replace("/", "_").replace("-", "_").replace("(", "").replace(")", "").replace( ",", "").replace(".", "").replace(":", "").replace(";", "").replace("'", "").replace("’", "")
+    return remove_accents(operator_name.replace(" ", "_").replace("/", "_").replace("-", "_").replace("(", "").replace(")", "").replace( ",", "").replace(".", "").replace(":", "").replace(";", "").replace("'", "").replace("’", ""))
 
 
 def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
@@ -272,7 +278,7 @@ def generate_gcmb_readmes(feeds: list[Feed]):
         for feed in feeds:
             readme = generate_gcmb_readme(feed)
             operator_name = operator_name_to_topic(feed.operator_name)
-            folder = f"generated/gcmb/{operator_name}"
+            folder = f"gcmb/{operator_name}"
             os.makedirs(folder, exist_ok=True)
             with open(f"{folder}/README.md", "w") as f:
                 f.write(readme)
