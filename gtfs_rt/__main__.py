@@ -201,6 +201,7 @@ def get_vehicle_positions(gtfs_rt_message_pb):
     vehicle_positions = []
     for entity in gtfs_rt_message.entity:
         if entity.HasField('vehicle'):
+            print(entity.vehicle)
             vehicle_positions.append(entity.vehicle)
 
     logger.info(f"Vehicle positions: {len(vehicle_positions)}")
@@ -255,6 +256,10 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
         position_topic = f"stefan/public-transport/{operator_topic_part}/vehicle_positions/{vehicle_id}"
         payload = f"{position.latitude},{position.longitude}"
         logger.debug(f"Publishing {payload} to {position_topic}")
+
+        # Expire vehicle positions after 1 minute
+        pos_properties = Properties(PacketTypes.PUBLISH)
+        pos_properties.MessageExpiryInterval = 60
         result = mqtt_client.publish(position_topic, payload , retain=True)
         logger.debug(f"Publish result: {result}")
 

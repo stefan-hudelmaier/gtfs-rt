@@ -1,21 +1,12 @@
-[tool.poetry]
+[project]
 name = "gtfs-rt"
 version = "0.1.0"
-description = ""
-authors = ["Stefan Hudelmaier <hudelmaier@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
-packages = [{include = "gtfs_rt"}]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-python-dotenv = "^1.0.1"
-requests = "^2.32.3"
-gtfs-realtime-bindings = "^1.0.0"
-paho-mqtt = "2.1.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-exec_name = "gtfs_rt.main:__main__"
+requires-python = ">=3.12"
+dependencies = [
+    "gtfs-realtime-bindings>=1.0.0",
+    "paho-mqtt>=2.1.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
