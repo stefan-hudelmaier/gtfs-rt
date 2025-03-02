@@ -1,4 +1,8 @@
 # Sankeo
+    
+## Location
+
+Saint-Nazaire, France
 
 ## License
 

@@ -1,4 +1,8 @@
 # Transavold
+    
+## Location
+
+Val d'Allos, France
 
 ## License
 

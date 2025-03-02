@@ -1,4 +1,8 @@
 # L'Inter des Laurentides
+    
+## Location
+
+Laurentides region, Canada
 
 ## License
 

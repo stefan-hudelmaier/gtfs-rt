@@ -1,4 +1,8 @@
 # Bordeaux - Navettes aéroport - 30 Direct
+    
+## Location
+
+Bordeaux, France
 
 ## License
 

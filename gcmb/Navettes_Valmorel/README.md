@@ -1,4 +1,8 @@
 # Navettes Valmorel
+    
+## Location
+
+Valmorel, France
 
 ## License
 

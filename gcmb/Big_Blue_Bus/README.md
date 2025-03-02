@@ -1,4 +1,8 @@
 # Big Blue Bus
+    
+## Location
+
+Santa Monica, California, United States
 
 ## License
 

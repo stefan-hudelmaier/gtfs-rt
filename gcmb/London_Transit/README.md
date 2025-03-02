@@ -1,4 +1,8 @@
 # London Transit
+    
+## Location
+
+London, Ontario, Canada
 
 ## License
 

@@ -1,4 +1,8 @@
 # Cap'bus
+    
+## Location
+
+Cap d'Agde, France
 
 ## License
 

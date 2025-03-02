@@ -1,4 +1,8 @@
 # Rezo Grand Verdun
+    
+## Location
+
+Verdun, France
 
 ## License
 

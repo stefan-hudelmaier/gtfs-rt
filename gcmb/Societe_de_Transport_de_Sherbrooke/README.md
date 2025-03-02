@@ -1,4 +1,8 @@
 # Société de Transport de Sherbrooke
+    
+## Location
+
+Sherbrooke, Canada
 
 ## License
 

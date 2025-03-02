@@ -1,4 +1,8 @@
 # Reseau du Grand Auch Coeur de Gascogne
+    
+## Location
+
+Grand Auch, France
 
 ## License
 

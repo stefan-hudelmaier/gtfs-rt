@@ -1,4 +1,8 @@
 # GoDurham
+    
+## Location
+
+Durham, North Carolina, United States
 
 ## License
 

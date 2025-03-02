@@ -1,4 +1,8 @@
 # Skibus
+    
+## Location
+
+Various ski resorts, Various
 
 ## License
 

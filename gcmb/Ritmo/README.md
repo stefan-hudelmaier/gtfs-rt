@@ -1,4 +1,8 @@
 # Ritmo
+    
+## Location
+
+Agglomeration of Saint-Omer, France
 
 ## License
 

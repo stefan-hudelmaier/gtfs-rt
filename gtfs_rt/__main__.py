@@ -277,8 +277,16 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
             logger.debug(f"Publish failed: {result.rc}")
 
 
-def generate_gcmb_operator_readme(feed: Feed):
+def generate_gcmb_operator_readme(feed: Feed, operator_extra_data):
+
+    country = operator_extra_data['country'] if 'country' in operator_extra_data else ""
+    location = operator_extra_data['location'] if 'location' in operator_extra_data else ""
+
     return f"""# {feed.operator_name}
+    
+## Location
+
+{location}, {country}
 
 ## License
 
@@ -291,11 +299,12 @@ URL: {feed.license.url}
 """
 
 
-def generate_gcmb_operator_readmes(feeds: list[Feed]):
+def generate_gcmb_operator_readmes(feeds: list[Feed], operators_extra_data: dict):
     if generate_gcmb_readme:
 
         for feed in feeds:
-            readme = generate_gcmb_operator_readme(feed)
+            operator_extra_data = operators_extra_data.get(feed.operator_name)
+            readme = generate_gcmb_operator_readme(feed, operator_extra_data)
             operator_name = operator_name_to_relative_topic(feed.operator_name)
             folder = f"gcmb/{operator_name}"
             os.makedirs(folder, exist_ok=True)
@@ -303,10 +312,8 @@ def generate_gcmb_operator_readmes(feeds: list[Feed]):
                 f.write(readme)
 
 
-def generate_gcmb_root_readme(feeds: list[Feed]):
+def generate_gcmb_root_readme(feeds: list[Feed], operators_extra_data: dict):
     with open('gcmb/README.md', 'w') as readme:
-        with open('operator-extra-data.json', 'r') as f:
-            operators_extra_data = json.load(f)
 
         operators_extra_data_by_continent = {}
         for operator_id, operator_data in operators_extra_data.items():
@@ -346,8 +353,11 @@ def main():
 
     rt_feeds_no_auth = [f for f in rt_feeds if f.authorization is None]
 
-    generate_gcmb_operator_readmes(rt_feeds_no_auth)
-    generate_gcmb_root_readme(rt_feeds_no_auth)
+    with open('operator-extra-data.json', 'r') as f:
+        operators_extra_data = json.load(f)
+
+    generate_gcmb_operator_readmes(rt_feeds_no_auth, operators_extra_data)
+    generate_gcmb_root_readme(rt_feeds_no_auth, operators_extra_data)
 
     logger.info(f"Total feeds: {len(rt_feeds)}")
     logger.info(f"Feeds without authorization: {len(rt_feeds_no_auth)}")

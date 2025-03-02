@@ -1,4 +1,8 @@
 # Navettes Coeur de Tarentaise
+    
+## Location
+
+Tarentaise Valley, France
 
 ## License
 
