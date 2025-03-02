@@ -1,5 +1,5 @@
 # Syndicat Intercommunal des Transports urbains de l'Agglomération du Calaisis
-    
+
 ## License
 
 Name: ODbL-1.0
@@ -7,4 +7,4 @@ URL: https://transport.data.gouv.fr/datasets/horaires-theoriques-et-temps-reel-d
 
 ## Map
 
-<WorldMap topic="Syndicat_Intercommunal_des_Transports_urbains_de_lAgglomeration_du_Calaisis/vehicle_positions/#" />
+<WorldMap topic="public-transport/rtfs-rt/Syndicat_Intercommunal_des_Transports_urbains_de_lAgglomeration_du_Calaisis/vehicle_positions/#" />

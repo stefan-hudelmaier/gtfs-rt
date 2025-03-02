@@ -1,5 +1,5 @@
 # GTT Servizi Turistici
-    
+
 ## License
 
 Name: CC-BY-4.0
@@ -7,4 +7,4 @@ URL: http://aperto.comune.torino.it/dataset/feed-gtfs-real-time-trasporti-gtt/re
 
 ## Map
 
-<WorldMap topic="GTT_Servizi_Turistici/vehicle_positions/#" />
+<WorldMap topic="public-transport/rtfs-rt/GTT_Servizi_Turistici/vehicle_positions/#" />

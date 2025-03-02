@@ -1,5 +1,5 @@
 # Société de Transport de Sherbrooke
-    
+
 ## License
 
 Name: CC-BY-4.0
@@ -7,4 +7,4 @@ URL: https://www.donneesquebec.ca/recherche/dataset/transport-sts/resource/bd79b
 
 ## Map
 
-<WorldMap topic="Societe_de_Transport_de_Sherbrooke/vehicle_positions/#" />
+<WorldMap topic="public-transport/rtfs-rt/Societe_de_Transport_de_Sherbrooke/vehicle_positions/#" />

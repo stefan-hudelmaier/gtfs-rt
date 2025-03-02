@@ -1,5 +1,5 @@
 # Reseau du Grand Auch Coeur de Gascogne
-    
+
 ## License
 
 Name: ODbL-1.0
@@ -7,4 +7,4 @@ URL: http://opendatacommons.org/licenses/odbl/summary/
 
 ## Map
 
-<WorldMap topic="Reseau_du_Grand_Auch_Coeur_de_Gascogne/vehicle_positions/#" />
+<WorldMap topic="public-transport/rtfs-rt/Reseau_du_Grand_Auch_Coeur_de_Gascogne/vehicle_positions/#" />
