@@ -2,7 +2,7 @@
     
 ## Location
 
-Mende, France
+Mende, France 🇫🇷
 
 ## License
 

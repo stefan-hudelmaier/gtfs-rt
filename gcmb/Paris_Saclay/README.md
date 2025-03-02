@@ -2,7 +2,7 @@
     
 ## Location
 
-Paris-Saclay, France
+Paris-Saclay, France 🇫🇷
 
 ## License
 

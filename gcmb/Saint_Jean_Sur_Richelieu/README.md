@@ -2,7 +2,7 @@
     
 ## Location
 
-Saint-Jean-sur-Richelieu, Canada
+Saint-Jean-sur-Richelieu, Canada 🇨🇦
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Avignon, France
+Avignon, France 🇫🇷
 
 ## License
 

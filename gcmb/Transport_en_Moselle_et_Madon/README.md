@@ -2,7 +2,7 @@
     
 ## Location
 
-Moselle-et-Madon, France
+Moselle-et-Madon, France 🇫🇷
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Bordeaux, France
+Bordeaux, France 🇫🇷
 
 ## License
 

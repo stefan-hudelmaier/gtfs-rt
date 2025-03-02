@@ -2,7 +2,7 @@
     
 ## Location
 
-Santa Monica, California, United States
+Santa Monica, California, United States 🇺🇸
 
 ## License
 

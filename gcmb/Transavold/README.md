@@ -2,7 +2,7 @@
     
 ## Location
 
-Val d'Allos, France
+Val d'Allos, France 🇫🇷
 
 ## License
 

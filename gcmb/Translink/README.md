@@ -2,7 +2,7 @@
     
 ## Location
 
-Metro Vancouver, Canada
+Metro Vancouver, Canada 🇨🇦
 
 ## License
 

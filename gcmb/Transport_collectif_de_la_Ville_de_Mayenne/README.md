@@ -2,7 +2,7 @@
     
 ## Location
 
-Mayenne, France
+Mayenne, France 🇫🇷
 
 ## License
 

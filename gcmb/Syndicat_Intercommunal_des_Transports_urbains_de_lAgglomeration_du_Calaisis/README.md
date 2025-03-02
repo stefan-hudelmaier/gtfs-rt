@@ -2,7 +2,7 @@
     
 ## Location
 
-Calais, France
+Calais, France 🇫🇷
 
 ## License
 

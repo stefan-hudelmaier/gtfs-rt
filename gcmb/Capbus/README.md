@@ -2,7 +2,7 @@
     
 ## Location
 
-Cap d'Agde, France
+Cap d'Agde, France 🇫🇷
 
 ## License
 

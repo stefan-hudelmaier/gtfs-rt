@@ -2,7 +2,7 @@
     
 ## Location
 
-Nîmes, France
+Nîmes, France 🇫🇷
 
 ## License
 

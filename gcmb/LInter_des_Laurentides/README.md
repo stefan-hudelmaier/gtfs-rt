@@ -2,7 +2,7 @@
     
 ## Location
 
-Laurentides region, Canada
+Laurentides region, Canada 🇨🇦
 
 ## License
 

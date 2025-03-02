@@ -2,7 +2,7 @@
     
 ## Location
 
-Oloron-Sainte-Marie, France
+Oloron-Sainte-Marie, France 🇫🇷
 
 ## License
 

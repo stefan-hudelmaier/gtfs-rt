@@ -2,7 +2,7 @@
     
 ## Location
 
-Valmorel, France
+Valmorel, France 🇫🇷
 
 ## License
 

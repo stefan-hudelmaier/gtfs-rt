@@ -2,7 +2,7 @@
     
 ## Location
 
-Johor Bahru, Malaysia
+Johor Bahru, Malaysia 🇲🇾
 
 ## License
 

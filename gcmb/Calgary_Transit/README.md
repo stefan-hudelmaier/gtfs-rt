@@ -2,7 +2,7 @@
     
 ## Location
 
-Calgary, Canada
+Calgary, Canada 🇨🇦
 
 ## License
 

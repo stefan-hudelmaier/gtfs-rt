@@ -2,7 +2,7 @@
     
 ## Location
 
-Toronto, Canada
+Toronto, Canada 🇨🇦
 
 ## License
 

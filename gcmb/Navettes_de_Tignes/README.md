@@ -2,7 +2,7 @@
     
 ## Location
 
-Tignes, France
+Tignes, France 🇫🇷
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Warsaw, Poland
+Warsaw, Poland 🇵🇱
 
 ## License
 

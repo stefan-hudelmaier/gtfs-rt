@@ -2,7 +2,7 @@
     
 ## Location
 
-Sherbrooke, Canada
+Sherbrooke, Canada 🇨🇦
 
 ## License
 

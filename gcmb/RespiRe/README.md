@@ -2,7 +2,7 @@
     
 ## Location
 
-Pays de Retz region, France
+Pays de Retz region, France 🇫🇷
 
 ## License
 

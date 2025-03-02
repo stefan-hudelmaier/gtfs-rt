@@ -2,7 +2,7 @@
     
 ## Location
 
-Ełk, Poland
+Ełk, Poland 🇵🇱
 
 ## License
 

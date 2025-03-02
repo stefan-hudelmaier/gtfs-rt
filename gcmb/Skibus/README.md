@@ -2,7 +2,7 @@
     
 ## Location
 
-Various ski resorts, Various
+Various ski resorts, Various 
 
 ## License
 

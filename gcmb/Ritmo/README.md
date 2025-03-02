@@ -2,7 +2,7 @@
     
 ## Location
 
-Agglomeration of Saint-Omer, France
+Agglomeration of Saint-Omer, France 🇫🇷
 
 ## License
 

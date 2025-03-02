@@ -2,7 +2,7 @@
     
 ## Location
 
-Verdun, France
+Verdun, France 🇫🇷
 
 ## License
 

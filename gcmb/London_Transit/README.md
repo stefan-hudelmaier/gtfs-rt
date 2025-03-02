@@ -2,7 +2,7 @@
     
 ## Location
 
-London, Ontario, Canada
+London, Ontario, Canada 🇨🇦
 
 ## License
 

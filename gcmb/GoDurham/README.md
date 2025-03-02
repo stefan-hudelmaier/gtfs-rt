@@ -2,7 +2,7 @@
     
 ## Location
 
-Durham, North Carolina, United States
+Durham, North Carolina, United States 🇺🇸
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Alès, France
+Alès, France 🇫🇷
 
 ## License
 

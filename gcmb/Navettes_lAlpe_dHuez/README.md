@@ -2,7 +2,7 @@
     
 ## Location
 
-l'Alpe d'Huez, France
+l'Alpe d'Huez, France 🇫🇷
 
 ## License
 

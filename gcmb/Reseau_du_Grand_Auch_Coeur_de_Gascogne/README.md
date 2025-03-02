@@ -2,7 +2,7 @@
     
 ## Location
 
-Grand Auch, France
+Grand Auch, France 🇫🇷
 
 ## License
 

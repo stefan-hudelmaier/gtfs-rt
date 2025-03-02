@@ -281,12 +281,13 @@ def generate_gcmb_operator_readme(feed: Feed, operator_extra_data):
 
     country = operator_extra_data['country'] if 'country' in operator_extra_data else ""
     location = operator_extra_data['location'] if 'location' in operator_extra_data else ""
+    flag_emoji = get_flag_emoji(operator_extra_data['country'])
 
     return f"""# {feed.operator_name}
     
 ## Location
 
-{location}, {country}
+{location}, {country} {flag_emoji}
 
 ## License
 
@@ -328,9 +329,7 @@ def generate_gcmb_root_readme(feeds: list[Feed], operators_extra_data: dict):
             readme.write("\n")
             operators = operators_extra_data_by_continent[continent]
             for operator_name, operator_data in operators:
-                country = pycountry.countries.get(name=operator_data['country'])
-                cc = country.alpha_2 if country else None
-                flag_emoji = flag.flag(cc) if cc else ""
+                flag_emoji = get_flag_emoji(operator_data['country'])
                 readme.write(f"* {operator_data['location']}: [{operator_name}]({operator_name_to_relative_topic(operator_name)}) {flag_emoji}\n")
             readme.write("\n")
 
@@ -341,6 +340,13 @@ def generate_gcmb_root_readme(feeds: list[Feed], operators_extra_data: dict):
             for feed in operators_not_in_extra_data:
                 readme.write(f"* [{feed.operator_name}]({operator_name_to_relative_topic(feed.operator_name)})\n")
             readme.write("\n")
+
+
+def get_flag_emoji(country_name):
+    country = pycountry.countries.get(name=country_name)
+    cc = country.alpha_2 if country else None
+    flag_emoji = flag.flag(cc) if cc else ""
+    return flag_emoji
 
 
 def main():

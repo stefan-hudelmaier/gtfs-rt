@@ -2,7 +2,7 @@
     
 ## Location
 
-Val d'Isère, France
+Val d'Isère, France 🇫🇷
 
 ## License
 

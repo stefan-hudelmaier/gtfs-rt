@@ -2,7 +2,7 @@
     
 ## Location
 
-Sel et Vermois, France
+Sel et Vermois, France 🇫🇷
 
 ## License
 

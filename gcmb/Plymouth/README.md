@@ -2,7 +2,7 @@
     
 ## Location
 
-Plymouth, United Kingdom
+Plymouth, United Kingdom 🇬🇧
 
 ## License
 

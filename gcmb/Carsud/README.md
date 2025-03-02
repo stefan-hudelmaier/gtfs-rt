@@ -2,7 +2,7 @@
     
 ## Location
 
-Southern Reunion Island, France
+Southern Reunion Island, France 🇫🇷
 
 ## License
 

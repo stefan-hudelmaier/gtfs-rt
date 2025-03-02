@@ -2,7 +2,7 @@
     
 ## Location
 
-British Columbia, Canada
+British Columbia, Canada 🇨🇦
 
 ## License
 

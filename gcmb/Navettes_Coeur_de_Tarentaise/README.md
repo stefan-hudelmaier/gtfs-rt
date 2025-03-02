@@ -2,7 +2,7 @@
     
 ## Location
 
-Tarentaise Valley, France
+Tarentaise Valley, France 🇫🇷
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Dijon, France
+Dijon, France 🇫🇷
 
 ## License
 

@@ -2,7 +2,7 @@
     
 ## Location
 
-Turin, Italy
+Turin, Italy 🇮🇹
 
 ## License
 

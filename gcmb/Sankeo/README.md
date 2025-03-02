@@ -2,7 +2,7 @@
     
 ## Location
 
-Saint-Nazaire, France
+Saint-Nazaire, France 🇫🇷
 
 ## License
 

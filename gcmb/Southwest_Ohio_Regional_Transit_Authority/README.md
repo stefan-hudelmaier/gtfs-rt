@@ -2,7 +2,7 @@
     
 ## Location
 
-Cincinnati, Ohio, United States
+Cincinnati, Ohio, United States 🇺🇸
 
 ## License
 

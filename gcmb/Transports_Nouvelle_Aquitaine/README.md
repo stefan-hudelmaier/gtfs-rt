@@ -2,7 +2,7 @@
     
 ## Location
 
-Nouvelle-Aquitaine region, France
+Nouvelle-Aquitaine region, France 🇫🇷
 
 ## License
 

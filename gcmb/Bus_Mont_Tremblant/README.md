@@ -2,7 +2,7 @@
     
 ## Location
 
-Mont-Tremblant, Canada
+Mont-Tremblant, Canada 🇨🇦
 
 ## License
 

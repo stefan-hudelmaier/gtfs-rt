@@ -2,7 +2,7 @@
     
 ## Location
 
-Madison, Wisconsin, United States
+Madison, Wisconsin, United States 🇺🇸
 
 ## License
 

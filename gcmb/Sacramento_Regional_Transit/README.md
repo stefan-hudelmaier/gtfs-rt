@@ -2,7 +2,7 @@
     
 ## Location
 
-Sacramento, California, United States
+Sacramento, California, United States 🇺🇸
 
 ## License
 

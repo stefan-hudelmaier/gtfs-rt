@@ -2,7 +2,7 @@
     
 ## Location
 
-Le Mans, France
+Le Mans, France 🇫🇷
 
 ## License
 

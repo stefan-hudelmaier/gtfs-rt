@@ -2,7 +2,7 @@
     
 ## Location
 
-Sarlat-la-Canéda, France
+Sarlat-la-Canéda, France 🇫🇷
 
 ## License
 

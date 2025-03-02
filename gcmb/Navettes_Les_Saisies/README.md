@@ -2,7 +2,7 @@
     
 ## Location
 
-Les Saisies, France
+Les Saisies, France 🇫🇷
 
 ## License
 

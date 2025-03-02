@@ -2,7 +2,7 @@
     
 ## Location
 
-Kuala Lumpur, Malaysia
+Kuala Lumpur, Malaysia 🇲🇾
 
 ## License
 
