@@ -1,0 +1,396 @@
+{
+  "BCTransit": {
+    "location": "British Columbia",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 49.2827,
+    "lon": -123.1207,
+    "cc": "CA"
+  },
+  "Ritmo": {
+    "location": "Agglomeration of Saint-Omer",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 50.7937,
+    "lon": 2.2618,
+    "cc": "FR"
+  },
+  "Tempobus": {
+    "location": "Le Mans",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 48.0077,
+    "lon": 0.1983
+  },
+  "Société de Transport de Sherbrooke": {
+    "location": "Sherbrooke",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 45.4026,
+    "lon": -71.8943
+  },
+  "Carsud": {
+    "location": "Southern Reunion Island",
+    "country": "France",
+    "continent": "Africa",
+    "lat": -21.2403,
+    "lon": 55.5136
+  },
+  "Miejski Zakład Komunikacji Sp. z o.o. (Ełk)": {
+    "location": "Ełk",
+    "country": "Poland",
+    "continent": "Europe",
+    "lat": 53.8318,
+    "lon": 22.3508
+  },
+  "RespiRe": {
+    "location": "Pays de Retz region",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 47.0863,
+    "lon": -1.9774
+  },
+  "Cap'bus": {
+    "location": "Cap d'Agde",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 43.3033,
+    "lon": 3.5117
+  },
+  "Toronto Transit Commission": {
+    "location": "Toronto",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 43.6532,
+    "lon": -79.3832
+  },
+  "Transport Arche": {
+    "location": "Pays d'Ancenis",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 47.3712,
+    "lon": -1.1769
+  },
+  "Skibus": {
+    "location": "Various ski resorts",
+    "country": "Various",
+    "continent": "Various",
+    "lat": null,
+    "lon": null
+  },
+  "Big Blue Bus": {
+    "location": "Santa Monica, California",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 34.0242,
+    "lon": -118.4965
+  },
+  "Navettes Coeur de Tarentaise": {
+    "location": "Tarentaise Valley",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.5562,
+    "lon": 6.7578
+  },
+  "Reseau du Grand Auch Coeur de Gascogne": {
+    "location": "Grand Auch",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 43.6477,
+    "lon": 0.5891
+  },
+  "Valley Metro": {
+    "location": "Phoenix, Arizona",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 33.4484,
+    "lon": -112.0740
+  },
+  "Syndicat Intercommunal des Transports urbains de l'Agglomération du Calaisis": {
+    "location": "Calais",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 50.9500,
+    "lon": 1.8500
+  },
+  "Transport collectif de la Ville de Mayenne": {
+    "location": "Mayenne",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 48.3045,
+    "lon": -0.6128
+  },
+  "Transport en Moselle et Madon": {
+    "location": "Moselle-et-Madon",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 48.5147,
+    "lon": 6.0963
+  },
+  "Ales'Y": {
+    "location": "Alès",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 44.1627,
+    "lon": 4.0759
+  },
+  "Southwest Ohio Regional Transit Authority": {
+    "location": "Cincinnati, Ohio",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 39.1031,
+    "lon": -84.5120
+  },
+  "L'Inter des Laurentides": {
+    "location": "Laurentides region",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 46.0373,
+    "lon": -74.4566
+  },
+  "Navette Sel et Vermois": {
+    "location": "Sel et Vermois",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 48.6010,
+    "lon": 6.3090
+  },
+  "Navettes Val d'Isere": {
+    "location": "Val d'Isère",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.4419,
+    "lon": 6.9749
+  },
+  "Zarząd Transportu Miejskiego w Warszawie": {
+    "location": "Warsaw",
+    "country": "Poland",
+    "continent": "Europe",
+    "lat": 52.2297,
+    "lon": 21.0122
+  },
+  "Transports en Commun Région d'Avignon": {
+    "location": "Avignon",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 43.9493,
+    "lon": 4.8055
+  },
+  "Bus Mont-Tremblant": {
+    "location": "Mont-Tremblant",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 46.1189,
+    "lon": -74.5983
+  },
+  "Sarlat'Bus": {
+    "location": "Sarlat-la-Canéda",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 44.8913,
+    "lon": 1.2163
+  },
+  "Translink": {
+    "location": "Metro Vancouver",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 49.2827,
+    "lon": -123.1207
+  },
+  "Rezo Grand Verdun": {
+    "location": "Verdun",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 49.1624,
+    "lon": 5.3789
+  },
+  "London Transit": {
+    "location": "London, Ontario",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 42.9849,
+    "lon": -81.2453
+  },
+  "Transdev Nîmes Mobilités": {
+    "location": "Nîmes",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 43.8360,
+    "lon": 4.3598
+  },
+  "Saint Jean Sur Richelieu": {
+    "location": "Saint-Jean-sur-Richelieu",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 45.3167,
+    "lon": -73.2500
+  },
+  "Navettes Valmorel": {
+    "location": "Valmorel",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.4744,
+    "lon": 6.4678
+  },
+  "Plymouth": {
+    "location": "Plymouth",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "lat": 50.3763,
+    "lon": -4.1428
+  },
+  "Bordeaux - Navettes aéroport - 30 Direct": {
+    "location": "Bordeaux",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 44.8378,
+    "lon": -0.5795
+  },
+  "Transports Nouvelle-Aquitaine": {
+    "location": "Nouvelle-Aquitaine region",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.0000,
+    "lon": 0.0000
+  },
+  "Paris Saclay": {
+    "location": "Paris-Saclay",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 48.7139,
+    "lon": 2.1339
+  },
+  "GTT Servizi Turistici": {
+    "location": "Turin",
+    "country": "Italy",
+    "continent": "Europe",
+    "lat": 45.0703,
+    "lon": 7.6869
+  },
+  "Calgary Transit": {
+    "location": "Calgary",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 51.0486,
+    "lon": -114.0708
+  },
+  "City of Madison Metro Transit": {
+    "location": "Madison, Wisconsin",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 43.0731,
+    "lon": -89.4012
+  },
+  "Sacramento Regional Transit": {
+    "location": "Sacramento, California",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 38.5816,
+    "lon": -121.4944
+  },
+  "Sankeo": {
+    "location": "Saint-Nazaire",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 47.2789,
+    "lon": -2.2081
+  },
+  "Navettes de Tignes": {
+    "location": "Tignes",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.4679,
+    "lon": 6.9056
+  },
+  "Transavold": {
+    "location": "Val d'Allos",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 44.2497,
+    "lon": 6.6346
+  },
+  "Navettes Les Saisies": {
+    "location": "Les Saisies",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.7828,
+    "lon": 6.5503
+  },
+  "Navettes l'Alpe d'Huez": {
+    "location": "l'Alpe d'Huez",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 45.0911,
+    "lon": 6.0711
+  },
+  "Buss": {
+    "location": "Various",
+    "country": "Various",
+    "continent": "Various",
+    "lat": null,
+    "lon": null
+  },
+  "MRC de Montcalm": {
+    "location": "Montcalm Regional County Municipality, Quebec",
+    "country": "Canada",
+    "continent": "North America",
+    "lat": 46.0467,
+    "lon": -73.8333
+  },
+  "GoDurham": {
+    "location": "Durham, North Carolina",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 35.9940,
+    "lon": -78.8986
+  },
+  "Transports Urbains Mendois": {
+    "location": "Mende",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 44.5167,
+    "lon": 3.5000
+  },
+  "Massachusetts Bay Transportation Authority": {
+    "location": "Boston, Massachusetts",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 42.3601,
+    "lon": -71.0589
+  },
+  "Keretapi Tanah Melayu Berhad": {
+    "location": "Kuala Lumpur",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "lat": 3.1390,
+    "lon": 101.6869
+  },
+  "DC Circulator": {
+    "location": "Washington, D.C.",
+    "country": "United States",
+    "continent": "North America",
+    "lat": 38.8951,
+    "lon": -77.0364
+  },
+  "Causeway Link": {
+    "location": "Johor Bahru",
+    "country": "Malaysia",
+    "continent": "Asia",
+    "lat": 1.4833,
+    "lon": 103.7667
+  },
+  "Keolis Dijon Mobilités": {
+    "location": "Dijon",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 47.3220,
+    "lon": 5.0415
+  },
+  "Navette Oloron Sainte-Marie": {
+    "location": "Oloron-Sainte-Marie",
+    "country": "France",
+    "continent": "Europe",
+    "lat": 43.1904,
+    "lon": -0.6111
+  }
+}

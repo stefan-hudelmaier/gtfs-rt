@@ -1,3 +1,3 @@
 #!/bin/bash
 
-poetry run python -m gtfs_rt
+uv run gtfs_rt/__main__.py

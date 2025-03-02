@@ -46,6 +46,15 @@ wheels = [
 ]
 
 [[package]]
+name = "emoji-country-flag"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9e/a0/9be36debd24ba5d26623b2ec3b9bdb05d49b62573d239f2ffb64157ab68c/emoji_country_flag-2.0.1.tar.gz", hash = "sha256:0faa32ca4f12da4e4c8324431947077b116caf998b0df0c01168ae8ece24e57a", size = 81150 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/71/e777f5b50df5dcf12740abe46d7896fa2d791516138a14a975ab8b71aa1c/emoji_country_flag-2.0.1-py3-none-any.whl", hash = "sha256:5465745b20f33d1ea46a53126f23f5aea34d66b20c2571c7bbb6a63925e4d95a", size = 25798 },
+]
+
+[[package]]
 name = "gtfs-realtime-bindings"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -60,16 +69,20 @@ name = "gtfs-rt"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "emoji-country-flag" },
     { name = "gtfs-realtime-bindings" },
     { name = "paho-mqtt" },
+    { name = "pycountry" },
     { name = "python-dotenv" },
     { name = "requests" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "emoji-country-flag", specifier = ">=2.0.1" },
     { name = "gtfs-realtime-bindings", specifier = ">=1.0.0" },
     { name = "paho-mqtt", specifier = ">=2.1.0" },
+    { name = "pycountry", specifier = ">=24.6.1" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "requests", specifier = ">=2.32.3" },
 ]
@@ -104,6 +117,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/4f/06/7c467744d23c3979ce250397e26d8ad8eeb2bea7b18ca12ad58313c1b8d5/protobuf-5.29.3-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:daaf63f70f25e8689c072cfad4334ca0ac1d1e05a92fc15c54eb9cf23c3efd84", size = 319573 },
     { url = "https://files.pythonhosted.org/packages/a8/45/2ebbde52ad2be18d3675b6bee50e68cd73c9e0654de77d595540b5129df8/protobuf-5.29.3-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:c027e08a08be10b67c06bf2370b99c811c466398c357e615ca88c91c07f0910f", size = 319672 },
     { url = "https://files.pythonhosted.org/packages/fd/b2/ab07b09e0f6d143dfb839693aa05765257bceaa13d03bf1a696b78323e7a/protobuf-5.29.3-py3-none-any.whl", hash = "sha256:0a18ed4a24198528f2333802eb075e59dea9d679ab7a6c5efb017a59004d849f", size = 172550 },
+]
+
+[[package]]
+name = "pycountry"
+version = "24.6.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/57/c389fa68c50590881a75b7883eeb3dc15e9e73a0fdc001cdd45c13290c92/pycountry-24.6.1.tar.gz", hash = "sha256:b61b3faccea67f87d10c1f2b0fc0be714409e8fcdcc1315613174f6466c10221", size = 6043910 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/ec/1fb891d8a2660716aadb2143235481d15ed1cbfe3ad669194690b0604492/pycountry-24.6.1-py3-none-any.whl", hash = "sha256:f1a4fb391cd7214f8eefd39556d740adcc233c778a27f8942c8dca351d6ce06f", size = 6335189 },
 ]
 
 [[package]]

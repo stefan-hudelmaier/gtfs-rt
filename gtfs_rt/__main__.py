@@ -1,3 +1,4 @@
+import itertools
 import os
 import json
 from pprint import pformat
@@ -13,6 +14,8 @@ import sys
 import paho.mqtt.client as mqtt
 from paho.mqtt.packettypes import PacketTypes
 from paho.mqtt.properties import Properties
+import flag
+import pycountry
 
 load_dotenv()
 
@@ -27,6 +30,8 @@ port = 8883
 client_id = 'stefan/public-transport/data-publisher/pub'
 username = os.environ['MQTT_USERNAME']
 password = os.environ['MQTT_PASSWORD']
+gcmb_org = 'public-transport'
+gcmb_project = 'rtfs-rt'
 
 log_level = os.environ.get('LOG_LEVEL', 'INFO')
 print("Using log level", log_level)
@@ -71,6 +76,7 @@ class License:
 @dataclass
 class Feed:
     operator_name: str
+    operator_onestop_id: str
     url: str
     authorization: dict
     license: License
@@ -149,7 +155,7 @@ def get_rt_feeds_from_file_content(filename, data):
                 continue
 
             authorization = feed.get('authorization')
-            feeds.append(Feed(operator['name'], urls['realtime_vehicle_positions'], authorization, feed_license))
+            feeds.append(Feed(operator['name'], operator['onestop_id'], urls['realtime_vehicle_positions'], authorization, feed_license))
 
     return feeds
 
@@ -213,8 +219,13 @@ def remove_accents(input_str):
     return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 
-def operator_name_to_topic(operator_name):
+def operator_name_to_relative_topic(operator_name):
     return remove_accents(operator_name.replace(" ", "_").replace("/", "_").replace("-", "_").replace("(", "").replace(")", "").replace( ",", "").replace(".", "").replace(":", "").replace(";", "").replace("'", "").replace("’", ""))
+
+
+def operator_name_to_absolute_topic(operator_name):
+    relative_parts = operator_name_to_relative_topic(operator_name)
+    return f"{gcmb_org}/{gcmb_project}/{relative_parts}"
 
 
 def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
@@ -224,7 +235,7 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
     if gtfs_rt_message_pb is None:
         return
 
-    operator_topic_part = operator_name_to_topic(feed.operator_name)
+    operator_topic_part = operator_name_to_relative_topic(feed.operator_name)
 
     gtfs_pb_topic = f"stefan/public-transport/{operator_topic_part}/pb"
     logger.debug(f"Publishing to {gtfs_pb_topic}")
@@ -239,7 +250,8 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
         retain=True,
         properties=properties
     )
-    logger.debug(f"Publish result: {result}")
+    if result.rc != mqtt.MQTT_ERR_SUCCESS:
+        logger.debug(f"Error publishing: {result.rc}")
 
     vehicle_positions = get_vehicle_positions(gtfs_rt_message_pb)
 
@@ -261,12 +273,13 @@ def fetch_from_feed(feed: Feed, mqtt_client: mqtt.Client):
         pos_properties = Properties(PacketTypes.PUBLISH)
         pos_properties.MessageExpiryInterval = 60
         result = mqtt_client.publish(position_topic, payload , retain=True)
-        logger.debug(f"Publish result: {result}")
+        if result.rc != mqtt.MQTT_ERR_SUCCESS:
+            logger.debug(f"Publish failed: {result.rc}")
 
 
-def generate_gcmb_readme(feed: Feed):
+def generate_gcmb_operator_readme(feed: Feed):
     return f"""# {feed.operator_name}
-    
+
 ## License
 
 Name: {feed.license.spdx_identifier}
@@ -274,20 +287,53 @@ URL: {feed.license.url}
 
 ## Map
 
-<WorldMap topic="{operator_name_to_topic(feed.operator_name)}/vehicle_positions/#" />
+<WorldMap topic="{operator_name_to_absolute_topic(feed.operator_name)}/vehicle_positions/#" />
 """
 
 
-def generate_gcmb_readmes(feeds: list[Feed]):
+def generate_gcmb_operator_readmes(feeds: list[Feed]):
     if generate_gcmb_readme:
 
         for feed in feeds:
-            readme = generate_gcmb_readme(feed)
-            operator_name = operator_name_to_topic(feed.operator_name)
+            readme = generate_gcmb_operator_readme(feed)
+            operator_name = operator_name_to_relative_topic(feed.operator_name)
             folder = f"gcmb/{operator_name}"
             os.makedirs(folder, exist_ok=True)
             with open(f"{folder}/README.md", "w") as f:
                 f.write(readme)
+
+
+def generate_gcmb_root_readme(feeds: list[Feed]):
+    with open('gcmb/README.md', 'w') as readme:
+        with open('operator-extra-data.json', 'r') as f:
+            operators_extra_data = json.load(f)
+
+        operators_extra_data_by_continent = {}
+        for operator_id, operator_data in operators_extra_data.items():
+            continent = operator_data['continent']
+            if not continent in operators_extra_data_by_continent:
+                operators_extra_data_by_continent[continent] = []
+            operators_extra_data_by_continent[continent].append((operator_id, operator_data))
+
+        continent_sorted = sorted(operators_extra_data_by_continent.keys())
+        for continent in continent_sorted:
+            readme.write(f"## {continent}\n")
+            readme.write("\n")
+            operators = operators_extra_data_by_continent[continent]
+            for operator_name, operator_data in operators:
+                country = pycountry.countries.get(name=operator_data['country'])
+                cc = country.alpha_2 if country else None
+                flag_emoji = flag.flag(cc) if cc else ""
+                readme.write(f"* {operator_data['location']}: [{operator_name}]({operator_name_to_relative_topic(operator_name)}) {flag_emoji}\n")
+            readme.write("\n")
+
+        operators_not_in_extra_data = [f for f in feeds if f.operator_name not in operators_extra_data]
+        if len(operators_not_in_extra_data) > 0:
+            readme.write("## Other\n")
+            readme.write("\n")
+            for feed in operators_not_in_extra_data:
+                readme.write(f"* [{feed.operator_name}]({operator_name_to_relative_topic(feed.operator_name)})\n")
+            readme.write("\n")
 
 
 def main():
@@ -300,7 +346,8 @@ def main():
 
     rt_feeds_no_auth = [f for f in rt_feeds if f.authorization is None]
 
-    generate_gcmb_readmes(rt_feeds_no_auth)
+    generate_gcmb_operator_readmes(rt_feeds_no_auth)
+    generate_gcmb_root_readme(rt_feeds_no_auth)
 
     logger.info(f"Total feeds: {len(rt_feeds)}")
     logger.info(f"Feeds without authorization: {len(rt_feeds_no_auth)}")
@@ -308,8 +355,8 @@ def main():
     # Turin
     url = 'http://percorsieorari.gtt.to.it/das_gtfsrt/vehicle_position.aspx'
 
-    feed = [f for f in rt_feeds_no_auth if f.url == url][0]
-    fetch_from_feed(feed, mqtt_client)
+    #feed = [f for f in rt_feeds_no_auth if f.url == url][0]
+    #fetch_from_feed(feed, mqtt_client)
 
 
 if __name__ == "__main__":
